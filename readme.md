@@ -47,8 +47,8 @@ public class TimerTest extends TimerTask
 
 ### 建立TimeWatcherService
 
-1. 主程式 `Start`
-    1. 將時間歸零，並從明日開始`SetTime()`
+- 主程式 `Start`
+1. 將時間歸零，並從明日開始`SetTime()`
    
 ```java
     /**
@@ -67,13 +67,13 @@ public class TimerTest extends TimerTask
         return calendar;
     }
 ```
-    2. 設定定時器
+2. 設定定時器
 
 ```java
     // 設定定時器
     Timer timer = new Timer();
 ```
-    3. 取得時間間格`halfOfTheDay()`
+3. 取得時間間格`halfOfTheDay()`
 
 ```java
     /**
@@ -86,8 +86,7 @@ public class TimerTest extends TimerTask
         return 12 * 60 * 60 * 1000;
     }
 ```
-
-    4. 啟用定時器
+4. 啟用定時器
 
 ```java
         // 從現在開始 1 秒鐘之後，每隔 1 秒鐘執行一次 job1
