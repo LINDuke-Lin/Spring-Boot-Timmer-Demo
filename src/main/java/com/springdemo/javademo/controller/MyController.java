@@ -1,5 +1,9 @@
 package com.springdemo.javademo.controller;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Timer;
 
 import com.springdemo.javademo.tool.TimerTest;
@@ -14,7 +18,10 @@ public class MyController {
 
     @GetMapping("/sayHi")
     public String sayHi(String name) {
-        Time();
+
+        System.out.println(ZonedDateTime.now(ZoneId.of("Asia/Taipei")) + " Api Start ....");
+        // Time();
+        setTime();
         return "hi!" + name;
     }
 
@@ -30,6 +37,25 @@ public class MyController {
                 System.out.println("Just do it");
             }
         }), delay1, period1);
+
+    }
+
+    private void setTime() {
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE), 0, 0, 0);
+
+        Timer timer = new Timer();
+        long period1 = 10 * 1000;
+
+        // 從現在開始 1 秒鐘之後，每隔 1 秒鐘執行一次 job1
+        timer.schedule(new TimerTest("good job", new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println(ZonedDateTime.now(ZoneId.of("Asia/Taipei")) + " hi hi hi hi hi hi");
+            }
+        }), calendar.getTime(), period1);
 
     }
 }
