@@ -1,4 +1,4 @@
-# Spring-boot Scheduled 排成
+# Spring-boot Scheduled 排程
 ### cron 表達式
 1. 組成規則
 - 每個時間單位都需用空格隔開
@@ -22,3 +22,5 @@
 - `-` -> 表示時間範圍，ex:只想在平日觸發，`12 12 12 * * 1-5`
 - `/` -> 開始時間/時間間隔，ex:早上四點開始每隔兩個小時觸發，`12 12 4/2 * * *`
 - `,` -> 時間陣列，ex:每天凌晨與正中午觸發`0 0 0,12 * * *`
+
+[回首頁](https://github.com/LINDuke-Lin/Spring-Boot-Timmer-Demo#spring-boot-timmer-demo)
