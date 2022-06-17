@@ -2,6 +2,8 @@ package com.springdemo.javademo.controller;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 import com.springdemo.javademo.service.ServiceImp.TimeWatcherServiceImp;
 
@@ -23,6 +25,7 @@ public class MyController {
 
     @GetMapping("/sayHi")
     public String sayHi(String name) {
+
         System.out.println(ZonedDateTime.now(ZoneId.of("Asia/Taipei")) + " Api Start ....");
         // 啟動定時器
         timeWatcher.Start();
