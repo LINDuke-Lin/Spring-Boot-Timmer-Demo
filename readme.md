@@ -1,5 +1,7 @@
 # Spring Boot Timmer Demo
 
+## [Spring-boot Scheduled 排程](https://github.com/LINDuke-Lin/Spring-Boot-Timmer-Demo/blob/main/docs/Scheduled.md)
+
 ## 1. TimerTask
 
 - 繼承 TimerTask
